@@ -21,7 +21,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 //
-                sh "docker run --rm -p 8080:8080 bradfordio1/spring-petclinic-angular:latest"
+                sh "docker run -p 9966:9966 springcommunity/spring-petclinic-rest"
             }
         }
     }
