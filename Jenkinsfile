@@ -7,12 +7,13 @@ pipeline {
                 sh "cd spring-petclinic-angular"
                 sh "docker build -t spring-petclinic-angular spring-petclinic-angular ."
                 sh "docker push bradfordio1/spring-petclinic-angular"
-                sh "docker run --rm -p 8080:8080 bradfordio1/spring-petclinic-angular"
+                
             }
         }
         stage('Deploy') {
             steps {
                 //
+                sh "docker run --rm -p 8080:8080 bradfordio1/spring-petclinic-angular"
             }
         }
     }
