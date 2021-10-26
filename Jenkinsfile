@@ -4,7 +4,7 @@ pipeline {
         stage('Build Docker Image - spring-petclinic-angular') {
             steps {
                 //
-                sh "cd spring-petclinic-angular"
+                sh "cd spring-petclinic-angular && ls"
                 sh "docker build -t spring-petclinic-angular:latest ."
                 sh "docker push bradfordio1/spring-petclinic-angular"
                 
