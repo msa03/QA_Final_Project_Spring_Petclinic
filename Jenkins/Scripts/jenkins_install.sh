@@ -56,5 +56,4 @@ done
 echo "initial admin password: \$(cat .jenkins/secrets/initialAdminPassword)"
 EOF
 
-chmod +x jenkins_install.sh
-sudo ./jenkins_install.sh
+sudo usermod -aG docker jenkins
