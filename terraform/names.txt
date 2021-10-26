@@ -1,0 +1,2 @@
+VPC tags = "vpc_teamB"
+EC2 name = "QA_teamB_manager_node"
