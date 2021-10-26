@@ -5,3 +5,4 @@ Security Group: QA_teamB_SecGr
 Kubernetes Cluster: QA_teamB_cluster
 IAM Role: QA_teamB_role
 VPC Tags: vpc_teamB
+Internet Gateway: QA_teamB_igw
