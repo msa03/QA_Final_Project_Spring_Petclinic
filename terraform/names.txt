@@ -1,2 +1,7 @@
-VPC tags = "vpc_teamB"
-EC2 name = "QA_teamB_manager_node"
+List of resource names used during terraforming.
+
+EC2 Manager Node: QA_teamB_manager_node
+Security Group: QA_teamB_SecGr
+Kubernetes Cluster: QA_teamB_cluster
+IAM Role: QA_teamB_role
+VPC Tags: vpc_teamB
