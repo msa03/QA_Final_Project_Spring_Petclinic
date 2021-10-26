@@ -1,22 +1,18 @@
-resource "aws_security_group" "QA_teamB_SecGr"
-{
+resource "aws_security_group" "QA_teamB_SecGr" {
     name        = var.sg_web_name
     description = var.sg_web_description
     vpc_id      = var.vpc_id
-    dynamic "ingress"
-    {
+    dynamic "ingress" {
         iterator = port
         for_each = var.ingress_ports
-        content
-        {
+        content {
             from_port   = port.value
             protocol    = "tcp"
             to_port     = port.value
             cidr_blocks = [var.ip_addresses]
         }
     }
-    egress
-    {
+    egress {
         from_port   = var.outbound_port
         protocol    = "-1"
         to_port     = var.outbound_port

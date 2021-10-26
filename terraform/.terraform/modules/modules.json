@@ -1,0 +1,1 @@
+{"Modules":[{"Key":"igw","Source":"./IGW","Dir":"IGW"},{"Key":"manager_node","Source":"./EC2","Dir":"EC2"},{"Key":"security_group","Source":"./SecGr","Dir":"SecGr"},{"Key":"subnet","Source":"./SubNet","Dir":"Subnet"},{"Key":"vpc","Source":"./VPC","Dir":"VPC"},{"Key":"","Source":"","Dir":"."},{"Key":"eks","Source":"./EKS","Dir":"EKS"},{"Key":"iam","Source":"./IAM","Dir":"IAM"}]}
