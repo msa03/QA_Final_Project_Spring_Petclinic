@@ -9,7 +9,7 @@ pipeline {
                 sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin'
             }
         }
-        stage('Build Docker Image - spring-petclinic-angular') {
+        stage('Build Docker Image: spring-petclinic-angular') {
             steps {
                 //
                 sh "cd spring-petclinic-angular && docker build -t spring-petclinic-angular . "
@@ -18,10 +18,12 @@ pipeline {
                 
             }
         }
-        stage('Deploy') {
+        stage('Start EKS deployment') {
             steps {
                 //
-                sh "docker run -p 9966:9966 springcommunity/spring-petclinic-rest"
+                sh "kubectl apply -f nginx.yaml"
+                sh "kubectl apply -f frontend.yaml"
+                sh "kubectl apply -f backend.yaml"
             }
         }
     }
