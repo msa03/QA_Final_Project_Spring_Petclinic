@@ -5,7 +5,7 @@ pipeline {
             steps {
                 //
                 sh "cd spring-petclinic-angular && ls"
-                sh "docker build -t spring-petclinic-angular:latest $(pwd)"
+                sh "docker build -t spring-petclinic-angular:latest . "
                 sh "docker push bradfordio1/spring-petclinic-angular"
                 
             }
