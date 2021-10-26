@@ -3,7 +3,7 @@ resource "aws_eks_cluster" "QA_teamB_cluster" {
   role_arn = aws_iam_role.QA_teamB_EKS_role.arn
 
   vpc_config {
-    subnet_ids = [aws_subnet.example1.id, aws_subnet.example2.id]
+    subnet_ids = [aws_subnet.subnet_1.id, aws_subnet.subnet_2.id]
   }
 
   # Ensure that IAM Role permissions are created before and deleted after EKS Cluster handling.
@@ -49,7 +49,7 @@ resource "aws_eks_node_group" "QA_teamB_node_group" {
   cluster_name    = aws_eks_cluster.QA_teamB_cluster.name
   node_group_name = "QA_teamB_node_group"
   node_role_arn   = aws_iam_role.QA_teamB_node_role.arn
-  subnet_ids      = aws_subnet.example[*].id
+  subnet_ids      = aws_subnet.subnet_ids[*].id
 
   scaling_config {
     desired_size = 1
