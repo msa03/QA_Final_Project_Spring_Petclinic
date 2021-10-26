@@ -57,3 +57,4 @@ echo "initial admin password: \$(cat .jenkins/secrets/initialAdminPassword)"
 EOF
 
 sudo usermod -aG docker jenkins
+sudo service jenkins restart
