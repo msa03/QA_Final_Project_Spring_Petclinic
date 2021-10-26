@@ -1,6 +1,14 @@
 pipeline {
     agent any
+    environmnet {
+        DOCKERHUB_CREDENTIALS = credentials('bradfordio1-dockerhub')
+    }
     stages {
+        stage ('DockerHub Login') {
+            steps {
+                sh 'echo $DOCKERHUB_CREDENTIALS_PSW | docker login -u $DOCKERHUB_CREDENTIALS_USR --password-stdin'
+            }
+        }
         stage('Build Docker Image - spring-petclinic-angular') {
             steps {
                 //
