@@ -1,6 +1,6 @@
 pipeline {
     agent any
-    environmnet {
+    environment {
         DOCKERHUB_CREDENTIALS = credentials('bradfordio1-dockerhub')
     }
     stages {
