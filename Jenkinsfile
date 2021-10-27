@@ -22,8 +22,7 @@ pipeline {
             steps {
                 //
                 sh "aws eks --region eu-west-1 update-kubeconfig --name DemoCluster"
-                sh "cd Kubernetes"
-                sh "kubectl apply -f nginx.yaml"
+                sh "cd Kubernetes && kubectl apply -f nginx.yaml"
                 sh "kubectl apply -f frontend.yaml"
                 sh "kubectl apply -f backend.yaml"
             }
