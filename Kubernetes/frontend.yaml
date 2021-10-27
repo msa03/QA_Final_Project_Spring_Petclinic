@@ -1,0 +1,25 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: frontend
+spec:
+  type: ClusterIP  
+  selector:
+    app: frontend     
+  ports:
+  - protocol: TCP
+    port: 8080
+    targetPort: 8080
+---
+apiVersion: v1
+kind: Podgit 
+metadata:
+  name: frontend
+  labels:
+    app: frontend     
+spec:
+  containers:
+  - name: frontend
+    image: redc4t2/frontend
+    ports:
+    - containerPort: 8080
