@@ -23,6 +23,7 @@ pipeline {
                 //
                 sh "aws eks --region eu-west-1 update-kubeconfig --name DemoCluster"
                 sh "cd Kubernetes && kubectl apply -f nginx.yaml && kubectl apply -f frontend.yaml && kubectl apply -f backend.yaml"
+                sh "kubectl get services"
             }
         }
     }
