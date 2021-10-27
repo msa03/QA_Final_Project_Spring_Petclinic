@@ -42,21 +42,6 @@ resource "aws_iam_role" "QA_teamB_EKS_role_arn" {
   })
 }
 
-resource "aws_iam_role" "QA_teamB_EKS_role_arn" {
-  name = "QA_teamB_EKS_role_arn"
-
-  assume_role_policy = jsonencode({
-    Statement = [{
-      Action = "sts:AssumeRole"
-      Effect = "Allow"
-      Principal = {
-        Service = "ec2.amazonaws.com"
-      }
-    }]
-    Version = "2012-10-17"
-  })
-}
-
 resource "aws_iam_role_policy_attachment" "QA_teamB_EKS_role_arn-AmazonEKSWorkerNodePolicy" {
   policy_arn = var.eks_worker_node_policy
   role       = aws_iam_role.QA_teamB_EKS_role_arn.name

@@ -28,8 +28,9 @@ variable "vpc_security_group_ids" {
     description = "VPC Security group IDs"
 }
 
-variable "user_data" {
-    description = "script to run when creating the instance"
-    default = "data.template_file.init.rendered"
+#variable "user_data" {
+#    description = "script to run when creating the instance"
+#    default = file("${path.module}/scripts/init.sh")
+#    default = "data.template_file.init.rendered"
   
-}
+#}

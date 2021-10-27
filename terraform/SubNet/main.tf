@@ -9,6 +9,6 @@ resource "aws_subnet" "public_subnets" {
     availability_zone = data.aws_availability_zones.available.names[count.index]
     map_public_ip_on_launch = true
     tags = {
-        "kubernetes.io/cluster/syed_cluster" = "shared"
+        "kubernetes.io/cluster/QA_teamB_cluster" = "shared"
     }
 }
