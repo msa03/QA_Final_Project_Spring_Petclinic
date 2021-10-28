@@ -68,7 +68,7 @@ And finally the running app on the cluster:
 In order to maintain strict and specific resource access on our AWS infastructure, IAM roles and groups were implemented on the primary account. Each member of the team was assigned to a group containing only the necessary policies to deploy the resources required to run the application.
 
 ###  Future Improvements 
-Our initial approach towards this task was to assign each other with the technology we were less experienced with in order to improve our overall cloud familiarity  and understanding of that specific tool/technology. However due to time constraints we were a day behind schedule and made the decision to just play to our individual strengths. It could also be possible to improve our efficiency by incorporating further agile methodologies and fully utilising Jira.
+* work on our weakest areas
+* Incorporate backend of the app on a RDS
 
-The current working version of the application meets the MVP and has further automation and security measures implemented however these could also be improved upon using further build servers.
-Autoscaling and self-healing could also be implemented to enhance availability and reliability of the deployed application.
+
