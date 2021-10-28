@@ -1,15 +1,16 @@
 # QA_Final_Project_Spring_Petclinic
 
-## Poject planning 
+### Project Brief
+We were assigned a group project to deploy via cloud infrastructure: a ready-made application that uses AngularJS and an API that uses Java. 
 
+### Project planning 
+We used github to host our code repository and we decided to use Jira for our project management. We chose this over Trello because it had a feature to integrate with our github repository for the project and allowed us to clearly assign tasks to individuals, which made our morning standups more efficient.
 
 ### Cost estimation
 We decided to use a t2.medium instance for the Jenkins server and a t2.medium instance for the kubernetes cluster. The cost of a t2.medium is $0.0464/hour and a kubernetes cluster is $0.10/hour. It was estimated that we would run these resources for approximately 24 hours, a day before the presentation, which was estimated at $5.
+
 ### Terraform
 We chose to use terraform as a way to manage the entire lifecylce of our infrastructure using infrastructure as code. We declared infrastructure components in configuration files that are then used by Terraform to provision various infrastructure in AWS in this case. 
-
-
-###  Project Pipeline
 
 ### Risk assessment 
 Our risk assessment shows the possible risk that may occur during the development of our project. This helps us to minimize any major faults or setbacks during the project:
@@ -24,7 +25,7 @@ some fo the risks and measures we identifed was:
 
 * App Virtual machine goes down, We can try and restore this by creating a new instance of the virtual machine and cloning from Github
 
-### Docker implementation
+### Docker Implementation
 In order to implement the Docker containers for the front end and back end, it was required to utilise the containerisation of docker and produce a container for both the front end (angular web app) and the back end (REST API with in built mysql memory store).
 
 small changes needed to be made to the front end in the case of changing the network environment endpoints to instead of pointing at localhost, to point towards the back end (when configured through Nginx) on a cluster.
@@ -34,7 +35,7 @@ It was then a simple task of building the docker containers and pushing them to 
 ### Network Diagram
 ![Netdia](https://user-images.githubusercontent.com/33896164/139308812-82eac98e-eb65-4cd5-9628-19d82afaf8d8.png)
 
-###  Kubernetes and Jenkins 
+### Kubernetes and Jenkins 
 For the CI/CD pipeline a Jenkins build server was provisioned and a Jenkinsfile was written to encompass the following steps:
 Polling of the Github respository for changes
 Building the Docker image of the app
