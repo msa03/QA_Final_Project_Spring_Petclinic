@@ -31,13 +31,13 @@ module "igw" {
 
 module "iam" {
     source = "./IAM"
-
+#    QA_teamB_EKS_role_attachment = module.iam.cluster_role_policy_2
 }
 
 module "eks" {
     source = "./EKS"
     subnet_ids = module.subnet.subnet_ids
-    QA_teamB_cluster_role_arn = module.iam.cluster_iam_role
+    QA_teamB_EKS_role_arn = module.iam.cluster_iam_role
     QA_teamB_node_role_arn = module.iam.node_iam_role
     available_subnets = [module.subnet.subnet_1, module.subnet.subnet_2]
 }

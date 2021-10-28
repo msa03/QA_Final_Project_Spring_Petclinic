@@ -1,4 +1,4 @@
- variable "QA_teamB_cluster_role_arn" {
+ variable "QA_teamB_EKS_role_arn" {
     description = "IAM Role for EKS Cluster"
 }
 

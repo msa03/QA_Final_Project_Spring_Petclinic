@@ -27,8 +27,8 @@ resource "aws_iam_role_policy_attachment" "QA_teamB_EKS_role-AmazonEKSServicePol
   role       = aws_iam_role.QA_teamB_EKS_role.name
 }
 
-resource "aws_iam_role" "QA_teamB_EKS_role_arn" {
-  name = "QA_teamB_EKS_role_arn"
+resource "aws_iam_role" "QA_teamB_node_role" {
+  name = "QA_teamB_node_role"
 
   assume_role_policy = jsonencode({
     Statement = [{
@@ -42,18 +42,17 @@ resource "aws_iam_role" "QA_teamB_EKS_role_arn" {
   })
 }
 
-resource "aws_iam_role_policy_attachment" "QA_teamB_EKS_role_arn-AmazonEKSWorkerNodePolicy" {
+resource "aws_iam_role_policy_attachment" "QA_teamB_node_role-AmazonEKSWorkerNodePolicy" {
   policy_arn = var.eks_worker_node_policy
-  role       = aws_iam_role.QA_teamB_EKS_role_arn.name
+  role       = aws_iam_role.QA_teamB_node_role.name
 }
 
-resource "aws_iam_role_policy_attachment" "QA_teamB_EKS_role_arn-AmazonEKS_CNI_Policy" {
+resource "aws_iam_role_policy_attachment" "QA_teamB_node_role-AmazonEKS_CNI_Policy" {
   policy_arn = var.eks_cni_policy
-  role       = aws_iam_role.QA_teamB_EKS_role_arn.name
+  role       = aws_iam_role.QA_teamB_node_role.name
 }
 
-resource "aws_iam_role_policy_attachment" "QA_teamB_EKS_role_arn-AmazonEC2ContainerRegistryReadOnly" {
+resource "aws_iam_role_policy_attachment" "QA_teamB_node_role-AmazonEC2ContainerRegistryReadOnly" {
   policy_arn = var.ec2_container_registry_readonly_policy
-  role       = aws_iam_role.QA_teamB_EKS_role_arn.name
+  role       = aws_iam_role.QA_teamB_node_role.name
 }
-
