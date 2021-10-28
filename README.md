@@ -7,6 +7,7 @@ We were assigned a group project to deploy via cloud infrastructure: a ready-mad
 We used github to host our code repository and we decided to use Jira for our project management. We chose this over Trello because it had a feature to integrate with our github repository for the project and allowed us to clearly assign tasks to individuals, which made our morning standups more efficient.
 ### Jira
 We used Jira as our planning software aplication for issue tracking and project managment, this helped us work within the agile frameworks. We got a good snesne of where the project was at all times and where it was heading. This made delegeating task a lot easier for our group.
+
 ![Screenshot_121](https://user-images.githubusercontent.com/55898620/139315712-d267fa58-9a30-428b-9050-d36b0d455dbf.png)
 
 ### Cost estimation
