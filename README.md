@@ -21,7 +21,7 @@ We chose to use terraform as a way to manage the entire lifecylce of our infrast
 
 ### Risk assessment 
 Our risk assessment shows the possible risk that may occur during the development of our project. This helps us to minimize any major faults or setbacks during the project:
-![Riskassesment])(Doc_images\Screenshot_122.png) 
+![Riskassesment](Doc_images\Screenshot_122.png) 
 some fo the risks and measures we identifed was:
 
 * App breaking code getting pushed up to the main branch, the measure for this was to double-check all code is working accordingly and having a backup file somewhere to revert to if things do go wrong.
