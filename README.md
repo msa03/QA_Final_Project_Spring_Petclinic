@@ -31,34 +31,17 @@ some fo the risks and measures we identifed was:
 * App Virtual machine goes down, We can try and restore this by creating a new instance of the virtual machine and cloning from Github
 
 ### Docker implementation
+In order to implement the Docker containers for the front end and back end, it was required to utilise the containerisation of docker and produce a container for both the front end (angular web app) and the back end (REST API with in built mysql memory store).
+
+small changes needed to be made to the front end in the case of changing the network environment endpoints to instead of pointing at localhost, to point towards the back end (when configured through Nginx) on a cluster.
+
+It was then a simple task of building the docker containers and pushing them to dockerhub, which provided the CI pipeline with the images required to run the web application successfully.
 
 ### Network diagram 
 
+### Kubernetes implementation 
 
-###  Kubernetes and Jenkins 
-For the CI/CD pipeline a Jenkins build server was provisioned and a Jenkinsfile was written to encompass the following steps:
-Polling of the Github respository for changes
-Building the Docker image of the app
-Logging into DockerHub and pushing the newly created image.
-Configuring the aws eks cluster with the newly created clustername
-Deploying the application on kubernetes using kubectl.
-
-This code is shown here:
-
-![deploy](https://github.com/msa03/QA_Final_Project_Spring_Petclinic/blob/f5b4aec74335db56e9842d655f570a9affc14ad3/Doc_images/Jenkinsfile.png)
-
-A successful deployment:
-
-![deployment](https://github.com/msa03/QA_Final_Project_Spring_Petclinic/blob/f5b4aec74335db56e9842d655f570a9affc14ad3/Doc_images/jenkins.png)
-
-Kubectl get services in the jenkins terminal showing the frontend, backend and nginx manifests:
-
-![kubectl](https://github.com/msa03/QA_Final_Project_Spring_Petclinic/blob/f5b4aec74335db56e9842d655f570a9affc14ad3/Doc_images/kubectl.png)
-
-Finally, the running app:
-
-![app](https://github.com/msa03/QA_Final_Project_Spring_Petclinic/blob/documents/Doc_images/Working%20App.png)https://github.com/msa03/QA_Final_Project_Spring_Petclinic/blob/documents/Doc_images/Working%20App.png
-
+###  Jenkins 
 
 ### Secruity
 We used IAM roles to delegate access with defined permissions to trusted entities, which was the rest of our group. This ensured only the account owner could do certain tasks.
