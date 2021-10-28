@@ -13,7 +13,7 @@ resource "aws_instance" "qa_manager_node" {
 }
 resource "aws_key_pair" "jenkinsbuildkey" {
   key_name   = "jenkinsbuildkey"
-  public_key = file("${path.module}/scripts/jenkinsbuildkey.pem")
+  public_key = file("${path.module}/terraform/jenkinsbuildkey.pem")
 }
 
 #data "template_file" "init" {
