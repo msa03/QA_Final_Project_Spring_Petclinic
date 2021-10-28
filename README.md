@@ -61,7 +61,7 @@ And finally the running app on the cluster:
 ### Secruity
 We used IAM roles to delegate access with defined permissions to trusted entities, which was the rest of our group. This ensured only the account owner could do certain tasks.
 
-###  Acknowledgments
+
 
 ###  Future Improvements 
 Our initial approach towards this task was to assign each other with the technolgy we are weakest at and  to improve our overall comptenacy and understanding of that technolgy, However due to time lost we was  a day behind and decided to just play to our strenghts because the product would not be at a place we would like it to be otherwise.
