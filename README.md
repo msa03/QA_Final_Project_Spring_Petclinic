@@ -34,9 +34,8 @@ some fo the risks and measures we identifed was:
 
 ### Network diagram 
 
-### Kubernetes implementation 
 
-###  Jenkins 
+###  Kubernetes and Jenkins 
 For the CI/CD pipeline a Jenkins build server was provisioned and a Jenkinsfile was written to encompass the following steps:
 Polling of the Github respository for changes
 Building the Docker image of the app
@@ -52,7 +51,7 @@ A successful deployment:
 
 ![deployment](https://github.com/msa03/QA_Final_Project_Spring_Petclinic/blob/f5b4aec74335db56e9842d655f570a9affc14ad3/Doc_images/jenkins.png)
 
-Kubectl get services in the jenkins terminal:
+Kubectl get services in the jenkins terminal showing the frontend, backend and nginx manifests:
 
 ![kubectl](https://github.com/msa03/QA_Final_Project_Spring_Petclinic/blob/f5b4aec74335db56e9842d655f570a9affc14ad3/Doc_images/kubectl.png)
 
