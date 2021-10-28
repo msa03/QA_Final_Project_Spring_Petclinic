@@ -39,8 +39,6 @@ It was then a simple task of building the docker containers and pushing them to 
 
 ### Network diagram 
 
-### Kubernetes implementation 
-
 ###  Kubernetes and Jenkins 
 For the CI/CD pipeline a Jenkins build server was provisioned and a Jenkinsfile was written to encompass the following steps:
 Polling of the Github respository for changes
