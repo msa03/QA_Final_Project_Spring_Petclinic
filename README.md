@@ -37,7 +37,8 @@ small changes needed to be made to the front end in the case of changing the net
 It was then a simple task of building the docker containers and pushing them to dockerhub, which provided the CI pipeline with the images required to run the web application successfully.
 
 ### Network Diagram
-![Netdia](https://user-images.githubusercontent.com/33896164/139308812-82eac98e-eb65-4cd5-9628-19d82afaf8d8.png)
+![Netdia](https://user-images.githubusercontent.com/33896164/139346043-31d2341b-2c29-41bd-ab2a-cee2b292d23c.png)
+
 
 ### Kubernetes and Jenkins 
 For the CI/CD pipeline a Jenkins build server was provisioned and a Jenkinsfile was written to encompass the following steps:
