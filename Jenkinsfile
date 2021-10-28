@@ -21,7 +21,7 @@ pipeline {
         stage('Deploy app to EKS') {
             steps {
                 //
-                sh "aws eks --region eu-west-1 update-kubeconfig --name DemoCluster"
+                sh "aws eks --region eu-west-1 update-kubeconfig --name QA_teamB_cluster"
                 sh "cd Kubernetes && kubectl apply -f nginx.yaml && kubectl apply -f backend.yaml && sleep 5 && kubectl apply -f frontend.yaml"
                 sh "kubectl get services"
             }
