@@ -7,7 +7,7 @@
 We decided to use a t2.medium instance for the Jenkins server and a t2.medium instance for the kubernetes cluster. The cost of a t2.medium is $0.0464/hour and a kubernetes cluster is $0.10/hour. It was estimated that we would run these resources for approximately 24 hours, a day before the presentation, which was estimated at $5.
 ### Terraform
 We chose to use terraform as a way to manage the entire lifecylce of our infrastructure using infrastructure as code. We declared infrastructure components in configuration files that are then used by Terraform to provision various infrastructure in AWS in this case. 
-#### Challenges
+
 
 ###  Project Pipeline
 
