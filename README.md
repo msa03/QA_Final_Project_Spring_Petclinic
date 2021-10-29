@@ -3,14 +3,14 @@
 ### Project Brief
 We were assigned a group project to deploy via cloud infrastructure: a ready-made application that uses AngularJS and an API that uses Java. 
 
-### Project planning 
+### Project Planning 
 We used Github to host our code repository and we decided to use Jira for our project management. We chose this over Trello because it had a feature to integrate with our Github repository for the project and allowed us to assign tasks to individuals, which made our morning standups more efficient.
 ### Jira
 We used Jira as our planning software application for issue tracking and project management, this helped us work within the agile frameworks. We got a good sense of which stage of development the project was at all times and future steps. This also made the delegation of tasks a lot more efficient.
 
 ![Screenshot_121](https://user-images.githubusercontent.com/55898620/139315712-d267fa58-9a30-428b-9050-d36b0d455dbf.png)
 
-### Cost estimation
+### Cost Estimation
 We decided to use a t2.medium instance for the Jenkins server and a t2.medium instance for the kubernetes cluster. The cost of a t2.medium is $0.0464/hour and a kubernetes cluster is $0.10/hour. It was estimated that we would run these resources for approximately 24 hours, a day before the presentation, which was estimated at $5.
 
 ### Terraform
@@ -21,7 +21,7 @@ Our risk assessment shows the possible issues that may occur during the developm
 ![Riskassesment](https://user-images.githubusercontent.com/55898620/139305877-a2e76366-a032-4304-ac16-ec574ece55ef.png)
 
 
-some of the risks and preventative measures we identified were:
+Some of the risks and preventative measures we identified were:
 
 * App breaking code getting pushed up to the main branch, the measure for this was to set up reviews for any pushes to git and having a previous version on a branch to revert to if things went go wrong.
 
@@ -68,7 +68,5 @@ And finally the running app on the cluster:
 To maintain strict and specific resource access on our AWS infrastructure, IAM roles and groups were implemented on the primary account. Each member of the team was assigned to a group containing only the necessary policies to deploy the resources required to run the application.
 
 ###  Future Improvements 
-* work on our weakest areas
+* Work on our weakest areas
 * Incorporate backend of the app on a RDS
-
-
